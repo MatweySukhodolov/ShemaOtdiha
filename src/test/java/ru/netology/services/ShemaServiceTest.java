@@ -14,9 +14,9 @@ public class ShemaServiceTest {
         int threshold = 20000; // сумма, при которой можно отдохнуть
         int expected = 3;
 
-        int actual = service.calculate(income, expenses);
+        int actual = service.calculate(income, expenses, threshold);
 
-        Assertions.assertEquals(expected, actual, threshold);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -27,9 +27,9 @@ public class ShemaServiceTest {
         int threshold = 150000; // сумма, при которой можно отдохнуть
         int expected = 2;
 
-        int actual = service.calculate(income, expenses);
+        int actual = service.calculate(income, expenses, threshold);
 
-        Assertions.assertEquals(expected, actual, threshold);
+        Assertions.assertEquals(expected, actual);
     }
 
 
